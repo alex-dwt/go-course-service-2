@@ -11,11 +11,11 @@ type UserRepository struct {
 }
 
 func (u UserRepository) GetUserBalance(ctx context.Context, userID int) (int, error) {
-	if userID < 5 {
+	if userID < 110 {
 		return 0, errors.New("user id wrong")
 	}
 
-	if userID == 10 {
+	if userID == 120 {
 		return 0, ErrUserNotFound
 	}
 
